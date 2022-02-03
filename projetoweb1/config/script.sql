@@ -1,0 +1,16 @@
+DROP DATABASE IF EXISTS projetoweb1;
+
+CREATE DATABASE projetoweb1;
+
+USE projetoweb1;
+
+CREATE TABLE cliente (
+	codigo INT AUTO_INCREMENT,
+	nome VARCHAR(80) NOT NULL,
+	email VARCHAR(80) NOT NULL UNIQUE,
+	tipo ENUM('PF', 'PJ'),
+	id VARCHAR(20) NOT NULL UNIQUE,
+	PRIMARY KEY(codigo)
+);
+
+DESC cliente;
